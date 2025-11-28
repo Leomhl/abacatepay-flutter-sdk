@@ -148,16 +148,13 @@ class Withdrawal {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is Withdrawal &&
-          runtimeType == other.runtimeType &&
-          id == other.id;
+      other is Withdrawal && runtimeType == other.runtimeType && id == other.id;
 
   @override
   int get hashCode => id.hashCode;
 
   @override
-  String toString() =>
-      'Withdrawal(id: $id, amount: $amount, status: $status)';
+  String toString() => 'Withdrawal(id: $id, amount: $amount, status: $status)';
 }
 
 /// Request to create a withdrawal.

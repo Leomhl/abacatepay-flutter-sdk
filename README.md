@@ -1,22 +1,12 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://abacatepay.com/logo-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://abacatepay.com/logo-light.svg">
-    <img alt="AbacatePay" src="https://abacatepay.com/logo-light.svg" width="300">
-  </picture>
+  <img src="assets/flubacate.png" alt="Flubacate" width="100%">
 </p>
 
 <h1 align="center">AbacatePay Flutter SDK</h1>
 
 <p align="center">
-  <a href="https://pub.dev/packages/abacatepay_flutter">
-    <img src="https://img.shields.io/pub/v/abacatepay_flutter.svg" alt="Pub Version">
-  </a>
-  <a href="https://github.com/AbacatePay/abacatepay-flutter-sdk/actions/workflows/test.yml">
-    <img src="https://github.com/AbacatePay/abacatepay-flutter-sdk/actions/workflows/test.yml/badge.svg" alt="Tests">
-  </a>
-  <a href="https://codecov.io/gh/AbacatePay/abacatepay-flutter-sdk">
-    <img src="https://codecov.io/gh/AbacatePay/abacatepay-flutter-sdk/branch/main/graph/badge.svg" alt="Coverage">
+  <a href="https://flutter.dev">
+    <img src="https://img.shields.io/badge/flutter-3.16+-blue.svg" alt="Flutter">
   </a>
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT">

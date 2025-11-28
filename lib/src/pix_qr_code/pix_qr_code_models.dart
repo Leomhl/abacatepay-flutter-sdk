@@ -95,8 +95,7 @@ class PixQrCode {
   int get hashCode => id.hashCode;
 
   @override
-  String toString() =>
-      'PixQrCode(id: $id, amount: $amount, status: $status)';
+  String toString() => 'PixQrCode(id: $id, amount: $amount, status: $status)';
 }
 
 /// Request to create a PIX QR Code.
@@ -123,6 +122,5 @@ class CreatePixQrCodeRequest {
   /// Converts the request to JSON.
   Map<String, dynamic> toJson() => _$CreatePixQrCodeRequestToJson(this);
 
-  static int? _expiresInToJson(Duration? duration) =>
-      duration?.inSeconds;
+  static int? _expiresInToJson(Duration? duration) => duration?.inSeconds;
 }

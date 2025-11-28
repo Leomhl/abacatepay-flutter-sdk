@@ -80,11 +80,11 @@ void main() {
   group('Billing API', () {
     test('POST /billing/create - Creates a new billing', () async {
       final billing = await client.billing.create(
-        CreateBillingRequest(
+        const CreateBillingRequest(
           frequency: BillingKind.oneTime,
           methods: [BillingMethod.pix],
           products: [
-            const Product(
+            Product(
               externalId: 'test_prod_001',
               name: 'Integration Test Product',
               quantity: 1,
@@ -94,7 +94,7 @@ void main() {
           ],
           returnUrl: 'https://example.com/return',
           completionUrl: 'https://example.com/success',
-          customer: const CustomerMetadata(
+          customer: CustomerMetadata(
             email: 'billing_test@example.com',
             name: 'Billing Test User',
             cellphone: '+5511888888888',
@@ -280,8 +280,8 @@ void main() {
   });
 
   group('Withdrawal API', () {
-    // NOTE: The withdrawal endpoint exists in the AbacatePay API according to docs,
-    // but may not be available in test/dev accounts or requires:
+    // NOTE: The withdrawal endpoint exists in the AbacatePay API according
+    // to docs, but may not be available in test/dev accounts or requires:
     // - Account verification
     // - Available balance for withdrawal
     // - PIX key configuration for receiving
@@ -314,7 +314,7 @@ void main() {
       final invalidClient = AbacatePay(apiKey: 'invalid_key_12345');
 
       expect(
-        () async => await invalidClient.store.get(),
+        () => invalidClient.store.get(),
         throwsA(isA<AbacatePayAuthException>()),
       );
     });
@@ -328,9 +328,9 @@ void main() {
       final billing = await client.billing.create(
         CreateBillingRequest(
           frequency: BillingKind.oneTime,
-          methods: [BillingMethod.pix],
-          products: [
-            const Product(
+          methods: const [BillingMethod.pix],
+          products: const [
+            Product(
               externalId: 'fullflow_prod',
               name: 'Full Flow Product',
               quantity: 2,

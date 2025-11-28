@@ -99,7 +99,8 @@ class BillingMetadata {
           completionUrl == other.completionUrl;
 
   @override
-  int get hashCode => fee.hashCode ^ returnUrl.hashCode ^ completionUrl.hashCode;
+  int get hashCode =>
+      fee.hashCode ^ returnUrl.hashCode ^ completionUrl.hashCode;
 }
 
 /// Represents a billing.
@@ -172,9 +173,7 @@ class Billing {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is Billing &&
-          runtimeType == other.runtimeType &&
-          id == other.id;
+      other is Billing && runtimeType == other.runtimeType && id == other.id;
 
   @override
   int get hashCode => id.hashCode;

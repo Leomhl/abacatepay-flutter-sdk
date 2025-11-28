@@ -23,8 +23,6 @@ class CouponClient {
   Future<List<Coupon>> list() async {
     final response = await httpClient.get('/coupon/list');
     final data = response['data'] as List<dynamic>;
-    return data
-        .map((e) => Coupon.fromJson(e as Map<String, dynamic>))
-        .toList();
+    return data.map((e) => Coupon.fromJson(e as Map<String, dynamic>)).toList();
   }
 }
